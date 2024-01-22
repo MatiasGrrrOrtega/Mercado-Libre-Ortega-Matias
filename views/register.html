@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/register.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+      crossorigin="anonymous"
+    />
+    <title>Mercado Libre de Impuestos</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <img
+          class="logo"
+          src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.5.16/mercadolibre/logo__large_plus@2x.png"
+          alt="Logo de mercado libre"
+        />
+        <div class="seeker">
+          <input
+            class="input-search"
+            type="text"
+            placeholder="Buscar productos, marcas"
+          /><button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <p class="description-service">
+          <i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin
+          tarjeta de crédito
+        </p>
+      </div>
+      <div class="burger-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="navbar">
+        <ul class="navbar--left">
+          <li class="navbar__item">
+            <a
+              class="navbar__item__link"
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ofertas</a
+            >
+          </li>
+          <li class="navbar__item">
+            <a
+              class="navbar__item__link"
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Tiendas Oficiales</a
+            >
+          </li>
+          <li class="navbar__item">
+            <a
+              class="navbar__item__link"
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Vender</a
+            >
+          </li>
+          <li class="navbar__item">
+            <a
+              class="navbar__item__link"
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ayuda</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar--right">
+          <li class="navbar__item">
+            <a
+              class="navbar__item__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Crea tu cuenta <i class="fa-regular fa-id-card"></i
+            ></a>
+          </li>
+          <li class="navbar__item">
+            <a
+              class="navbar__item__link"
+              href="./login.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ingresa <i class="fa-solid fa-right-to-bracket"></i
+            ></a>
+          </li>
+          <li class="navbar__item">
+            <a
+              class="navbar__item__link"
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Mis compras <i class="fa-solid fa-basket-shopping"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Registrate</h1>
+      <form class="form-register" action="/register" method="POST">
+        <div class="form-group">
+          <label class="form-group-title" for="name">Nombre y Apellido</label>
+          <input type="text" id="name" name="name"  placeholder="ej. Juan Bustamante" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-group-title" for="name">Nombre de Usuario</label>
+          <input type="text" id="username" name="username"  placeholder="ej. usuario01" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-group-title" for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="username" placeholder="ej. correonombre@servicio.com" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-group-title" for="birthdate">Fecha de nacimiento</label>
+          <input type="date" id="birthdate" name="birthdate" required>
+        </div>
+        <div class="form-group">
+          <label class="form-group-title" for="address">Domicilio</label>
+          <input type="text" id="address" name="address" required/>
+        </div>
+        <div class="form-group">
+          <h3>Perfil de usuario</h3>
+          <label>
+            <input type="radio" name="user_profile" required>
+            Comprador
+          </label>
+          <label>
+            <input type="radio" name="user_profile" required>
+            Vendedor
+          </label>
+        </div>
+        <div class="form-group">
+          <h3>Categoria de interes</h3>
+          <label>
+            <input type="checkbox" name="interests">
+            Electro
+          </label>
+          <label>
+            <input type="checkbox" name="interests">
+            Moda
+          </label>
+          <label>
+            <input type="checkbox" name="interests">
+            Hogar
+          </label>
+          <label>
+            <input type="checkbox" name="interests">
+            Jugueteria
+          </label>
+          <label>
+            <input type="checkbox" name="interests">
+            Vida Sana
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="form-group-title" for="avatar">Foto de usuario</label>
+          <img class="image-user-profile" src="../public/images/user.webp" alt="avatar" id="image" />
+          <input type="file" name="photo" id="photo" accept="image/*" />
+        </div>
+        <div class="form-group">
+          <label class="form-group-title" for="password">Contraseña</label>
+          <input type="password" id="password" name="password" autocomplete="new-password"/>
+        </div>
+        <div class="form-group">
+          <label class="form-group-title" for="password_confirmation">Confirmar contraseña</label>
+          <input type="password" id="password_confirmation" name="password_confirmation" autocomplete="new-password"/>
+        </div>
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+      </form>
+    </main>
+    <footer class="content-info">
+      <div class="slide__info">
+        <i class="fa-solid fa-credit-card"></i>
+        <h4>Pagá con tarjeta o en efectivo</h4>
+        <p>
+          Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
+          efectivo en puntos de pago. ¡Y siempre es seguro!
+        </p>
+      </div>
+      <div class="slide__info">
+        <i class="fa-solid fa-truck"></i>
+        <h4>Envío gratis desde $ 2.500</h4>
+        <p>
+          Solo por estar registrado en Mercado Liebre tenés envíos gratis en
+          miles de productos. Es un beneficio de Mercado Puntos.
+        </p>
+      </div>
+      <div class="slide__info">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h4>Seguridad, de principio a fin</h4>
+        <p>
+          ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas
+          hacer,porque estás siempre protegido.
+        </p>
+      </div>
+      <div class="slide__info">
+        <span>Copyright &copy; 1999-2020 MercadoLiebre S.R.L.</span>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const defaultFile = '../public/images/user.webp';
+    const file = document.getElementById( 'photo' );
+    const img = document.getElementById( 'image' );
+
+    file.addEventListener( 'change', e => {
+      if( e.target.files[0] ){
+        const reader = new FileReader( );
+        reader.onload = function( e ){
+          img.src = e.target.result;
+        }
+        reader.readAsDataURL(e.target.files[0])
+      }else{
+        img.src = defaultFile;
+      }
+    } );
+  </script>
+</html>

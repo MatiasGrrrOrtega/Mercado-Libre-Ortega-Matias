@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+:root {
+  --color-yellow: #eac926;
+  --color-blue: #03264c;
+  --color-sky-blue: #1259c3;
+  --color-dark-gray: #666;
+  --color-light-gray: #ebebeb;
+  --color-green: #39b54a;
+}
+body {
+  background-color: var(--color-light-gray);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  background-color: var(--color-yellow);
+  padding: 12px;
+}
+main {
+  width: 90%;
+  margin: auto;
+  padding: 12px;
+}
+section {
+  margin: auto;
+  padding: 15px;
+}
+.header-top{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.seeker{
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+}
+.logo, .seeker{
+  padding: 0 5px;
+  width: 50%;
+}
+.seeker .input-search{
+  width: 80%;
+  height: 2.7rem;
+  border-radius: 5px 0 0 5px;
+  padding: 0 0 0 .5rem;
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+.seeker button{
+  width: 20%;
+  border-radius: 0 15px px 0;
+  border: none;
+  background-color: white;
+}
+.description-service{
+  margin: 12px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+}
+.burger-menu {
+  background-color: var(--color-sky-blue);
+  width: 50px;
+  height: 50px;
+  border-radius: 15%;
+  margin: 24px auto;
+}
+
+.burger-menu i {
+  color: white;
+  font-size: 28px;
+  transform: translate(50%, 40%);
+}
+
+.navbar {
+  display: none;
+}
+.section-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Estilo para el contenedor de los productos */
+
+.card {
+  display: inline-block;
+  width: 300px; 
+  margin: 5px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Estilo para el contenedor de información del producto */
+.card__info {
+  margin-top: 10px;
+  border-top: 1px solid var(--color-light-gray);
+}
+
+.card__image {
+  width: 100%;
+  height: 230px;
+}
+
+.card__price-info {
+  display: flex;
+  align-items: end;
+}
+
+.card__price-info p {
+  flex-grow: .5;
+}
+
+.send-icon {
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  position: relative;
+  border: var(--color-green) solid 1px;
+  border-radius: 50%;
+}
+
+.send-icon i {
+  position: absolute;
+  color: var(--color-green);
+  top: 25%;
+  left: 25%;
+}
+
+.card__discount {
+  color: var(--color-green);
+}
+
+.card__name {
+  display: none;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.card__price {
+  font-size: 1.5em;
+}
+
+.title__section {
+  font-size: 24px;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: white;
+  padding: 24px;
+}
+
+.slide__info{
+  margin: 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-blue);
+}
+.slide__info i{
+  font-size: 2em;
+}
+.slide__info h4{
+  margin: 10px 0;
+}
+
+/*MEDIA QUERIS*/
+
+@media (min-width: 768px) {
+
+  .header-top{
+    flex-wrap: nowrap;
+  }
+  .logo{
+    width: 30%;
+  } 
+  .seeker{
+    width: 30%;
+  }
+  .description-service{
+    width: 70%;
+    font-size: 0.88em;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar--right, .navbar--left {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .navbar__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar__item__link{
+    width: 100%;
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 0.88em;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+  }
+
+  .section-products {
+    justify-content: space-around;
+  }
+  .card {
+    width: 300px;
+    box-shadow: 0 0 10px rgb(100, 100, 100);
+  }
+
+  .card__image {
+    height: 240px;
+  }
+
+  .card__name {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-top, .navbar, main{
+    max-width: 1200px;
+    margin: auto;
+  }
+  .description-service{
+    width: 70%;
+    font-size: 1.1em;
+  }
+  .navbar__item__link{
+    font-size: 1.1em;
+  }
+  .section-products {
+    justify-content: space-between;
+  }
+  .card {
+    width: 265px;
+  }
+}
