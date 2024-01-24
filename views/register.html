@@ -15,11 +15,11 @@
   <body>
     <header>
       <div class="header-top">
-        <img
-          class="logo"
-          src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.5.16/mercadolibre/logo__large_plus@2x.png"
-          alt="Logo de mercado libre"
-        />
+        <a href="http://localhost:3001/">
+          <img class="logo"
+            src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.5.16/mercadolibre/logo__large_plus@2x.png"
+            alt="Logo de mercado libre" />
+        </a>
         <div class="seeker">
           <input
             class="input-search"
@@ -79,7 +79,6 @@
             <a
               class="navbar__item__link"
               href="#"
-              target="_blank"
               rel="noopener noreferrer"
               >Crea tu cuenta <i class="fa-regular fa-id-card"></i
             ></a>
@@ -87,8 +86,7 @@
           <li class="navbar__item">
             <a
               class="navbar__item__link"
-              href="./login.html"
-              target="_blank"
+              href="http://localhost:3001/login"
               rel="noopener noreferrer"
               >Ingresa <i class="fa-solid fa-right-to-bracket"></i
             ></a>
@@ -97,7 +95,6 @@
             <a
               class="navbar__item__link"
               href="http://"
-              target="_blank"
               rel="noopener noreferrer"
               >Mis compras <i class="fa-solid fa-basket-shopping"></i
             ></a>
@@ -107,7 +104,7 @@
     </header>
     <main class="main-register">
       <h1>Registrate</h1>
-      <form class="form-register" action="/register" method="POST">
+      <form class="form-register" action="/views/register.html" method="POST">
         <div class="form-group">
           <label class="form-group-title" for="name">Nombre y Apellido</label>
           <input type="text" id="name" name="name"  placeholder="ej. Juan Bustamante" required/>
@@ -176,7 +173,7 @@
           <input type="password" id="password_confirmation" name="password_confirmation" autocomplete="new-password"/>
         </div>
         <button type="submit">Enviar</button>
-        <button type="reset">Borrar</button>
+        <button id="reset" type="reset">Borrar</button>
       </form>
     </main>
     <footer class="content-info">
@@ -213,7 +210,7 @@
     const defaultFile = '../public/images/user.webp';
     const file = document.getElementById( 'photo' );
     const img = document.getElementById( 'image' );
-
+    const reset = document.getElementById( 'reset' );
     file.addEventListener( 'change', e => {
       if( e.target.files[0] ){
         const reader = new FileReader( );
@@ -224,6 +221,10 @@
       }else{
         img.src = defaultFile;
       }
+    } );
+
+    reset.addEventListener( 'click', e => {
+      img.src = defaultFile;
     } );
   </script>
 </html>

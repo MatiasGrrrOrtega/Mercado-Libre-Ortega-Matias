@@ -43,9 +43,17 @@ section {
   background-color: white;
   border-radius: 5px;
 }
-.logo, .seeker{
+a , .seeker{
   padding: 0 5px;
   width: 50%;
+}
+
+a .logo{
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--color-blue);
+  text-decoration: none;
 }
 .seeker .input-search{
   width: 80%;
@@ -230,7 +238,7 @@ footer {
   .header-top{
     flex-wrap: nowrap;
   }
-  .logo{
+  a{
     width: 30%;
   } 
   .seeker{
