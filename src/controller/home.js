@@ -1,6 +1,8 @@
+const data = require('../model/products.json')
+
 class HomeController {
   static renderHome(req, res) {
-    res.render('home')
+    res.render('home', { products: data.products })
   }
 }
 
