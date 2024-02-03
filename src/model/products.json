@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "img": "https://http2.mlstatic.com/D_NQ_NP_706429-MLA41875311491_052020-O.webp",
+      "price": 6.770,
+      "discount": "20% off",
+      "name": "Cafetera Moulinex"
+    },
+    {
+      "id": 2,
+      "img": "https://http2.mlstatic.com/D_NQ_NP_711689-MLA49599116073_042022-O.webp",
+      "price": 230.000,
+      "discount": "20% off",
+      "name": "Macbook Pro 2019"
+    },
+    {
+      "id": 3,
+      "img": "https://http2.mlstatic.com/D_NQ_NP_743492-MLA52964050287_122022-O.webp",
+      "price": 70.500,
+      "discount": "10% off",
+      "name": "Samsung Galaxy S10"
+    },
+    {
+      "id": 4,
+      "img": "https://http2.mlstatic.com/D_NQ_NP_665257-MLA54912889532_042023-O.webp",
+      "price": 23.200,
+      "discount": "5% off",
+      "name": "SmartTv Samsung 43°"
+    }
+  ]
+}
